@@ -28,7 +28,7 @@ const Racional Racional::operator+(const Racional& rac)const{
 	num2 = rac.getNum()*denominador;
 	numf = num1+num2;
 	Racional r(numf,denacum);
-	ofstream racio("Racionales.txt",ios::app);
+	ofstream racio("Log.txt",ios::app);
 	if(racio.is_open()){
 		racio<<numerador<<"/"<<denominador<<"   +   "<<rac.getNum()<<"/"<<rac.getDen()<<"   =   "<< r.getNum()<<"/"<<r.getDen()<<endl;
 		racio.close();
@@ -43,7 +43,7 @@ const Racional Racional::operator-(const Racional& rac)const{
 	num2 = rac.getNum()*denominador;
 	numf = num1-num2;
 	Racional r(numf,denacum);
-	ofstream racio("Racionales.txt",ios::app);
+	ofstream racio("Log.txt",ios::app);
 	if(racio.is_open()){
 		racio<<numerador<<"/"<<denominador<<"   -   "<<rac.getNum()<<"/"<<rac.getDen()<<"   =   "<< r.getNum()<<"/"<<r.getDen()<<endl;
 		racio.close();
@@ -53,7 +53,7 @@ const Racional Racional::operator-(const Racional& rac)const{
 
 const Racional Racional::operator*(const Racional& rac)const{
 	Racional r(numerador*rac.getNum(),denominador*rac.getDen());
-	ofstream racio("Racionales.txt",ios::app);
+	ofstream racio("Log.txt",ios::app);
 	if(racio.is_open()){
 		racio<<numerador<<"/"<<denominador<<"   *   "<<rac.getNum()<<"/"<<rac.getDen()<<"   =   "<< r.getNum()<<"/"<<r.getDen()<<endl;
 		racio.close();
@@ -63,7 +63,7 @@ const Racional Racional::operator*(const Racional& rac)const{
 
 const Racional Racional::operator/(const Racional& rac)const{
 	Racional r(numerador*rac.getDen(), denominador*rac.getNum());
-	ofstream racio("Racionales.txt",ios::app);
+	ofstream racio("Log.txt",ios::app);
 	if(racio.is_open()){
 		racio<<numerador<<"/"<<denominador<<"   /   "<<rac.getNum()<<"/"<<rac.getDen()<<"   =   "<< r.getNum()<<"/"<<r.getDen()<<endl;
 		racio.close();
@@ -80,7 +80,7 @@ const void Racional:: operator+=(const Racional& rac){
 	//numerador = numf;
 	//denominador = denacum;
 	//Simplificar();
-	ofstream racio("Racionales.txt",ios::app);
+	ofstream racio("Log.txt",ios::app);
 	if(racio.is_open()){
 		racio<<numerador<<"/"<<denominador<<"   +=   "<<rac.getNum()<<"/"<<rac.getDen()<<"   =   ";
 		numerador = numf;
@@ -100,7 +100,7 @@ const void Racional:: operator-=(const Racional& rac){
 	//numerador = numf;
 	//denominador = denominador*rac.getDen();
 	//Simplificar();
-	ofstream racio("Racionales.txt",ios::app);
+	ofstream racio("Log.txt",ios::app);
 	if(racio.is_open()){
 		racio<<numerador<<"/"<<denominador<<"   -=   "<<rac.getNum()<<"/"<<rac.getDen()<<"   =   ";
 		numerador = numf;
@@ -115,7 +115,7 @@ const void Racional:: operator*=(const Racional& rac){
 	//numerador = numerador*rac.getNum();
 	//denominador = denominador*rac.getDen();
 	//Simplificar();
-	ofstream racio("Racionales.txt",ios::app);
+	ofstream racio("Log.txt",ios::app);
 	if(racio.is_open()){
 		racio<<numerador<<"/"<<denominador<<"   *=   "<<rac.getNum()<<"/"<<rac.getDen()<<"   =   ";
 		numerador = numerador*rac.getNum();
@@ -130,7 +130,7 @@ const void Racional:: operator/=(const Racional& rac){
 	//numerador = numerador*rac.getDen();
 	//denominador = denominador*rac.getNum();
 	//Simplificar();
-	ofstream racio("Racionales.txt",ios::app);
+	ofstream racio("Log.txt",ios::app);
 	if(racio.is_open()){
 		racio<<numerador<<"/"<<denominador<<"   /=   "<<rac.getNum()<<"/"<<rac.getDen()<<"   =   ";
 		numerador = numerador*rac.getDen();
@@ -165,7 +165,7 @@ void Racional::Simplificar(){
 }
 
 void Racional::write(int num, int den)const{
-	ofstream racional("Racionales.txt",ios::app);
+	ofstream racional("Log.txt",ios::app);
 	if(racional.is_open()){
 		racional<<num<<"/"<<den<<"	";
 		racional.close();

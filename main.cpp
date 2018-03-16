@@ -86,22 +86,18 @@ int menu(){
 }
 
 const Racional Select1(vector<const Racional*> r){
-	int op = 0;
-	while(op < 0 || op >= r.size()){
-		show(r);
-		cin>>op;
-		op--;
-	}
+	int op = 1;
+	show(r);
+	cin>>op;
+	op--;
 	return *r[op];
 }
 
 const Racional Select2(vector<const Racional*> r){
-	int op = 0;
-	while(op < 0 || op >= r.size()){
-		show(r);
-		cin>>op;
-		op--;
-	}
+	int op = 1;
+	show(r);
+	cin>>op;
+	op--;
 	return *r[op];
 }
 
